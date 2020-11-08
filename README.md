@@ -6,7 +6,8 @@ Author:  Gerry Gabrisch GISP (gerry@shuksangeomatics.com)
 This tool will take a directory of geo-tagged images (including images in any subdirectories) and 
 it will create  a KML file or a CSV file in that directory. 
 
-Created with Python 3.4 
+Created with Python 3.6
+Tested and working on Ubuntu 18.04 
 
 This tool requires the following third-party libraries available from PyPi.
 Pillow (Python 3 fork of the Python Image Library (PIL)
