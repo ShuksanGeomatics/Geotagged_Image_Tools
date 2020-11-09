@@ -103,8 +103,8 @@ try:
             return "fDecantonate failed! Strings do not match, decantonation not possible." 
     
     def make_files(inDir, projectName, incolor, make_kml, make_csv):
-        outKML = inDir+"/"+ projectName + ".kml"
-        outCSV = inDir+"/"+ projectName + ".csv"
+        outKML = os.path.join(inDir, projectName + ".kml")
+        outCSV = os.path.join(inDir, projectName + ".csv")
         
         
         if make_csv:
