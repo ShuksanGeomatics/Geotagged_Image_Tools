@@ -191,7 +191,7 @@ except:
 def main():
     
     #command line example below...
-    #python Create_KML_CSV_From_Geotagged_Images2020.py '/home/gerry/PythonScripts/GeoEXIF/testimage' 'run_as_main' 'ff000000' True True
+    #python Create_KML_CSV_From_Geotagged_Images.py '/home/gerry/PythonScripts/GeoEXIF/testimage' 'commandline' 'ff000000' True True
     #make_files(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5])    
     
     ##  To run in an IDE - comment out the command line example above.  Uncomment the code below and add your own parameters
@@ -210,3 +210,5 @@ def main():
     
 if __name__ == "__main__":
     main()
+#else:
+    #make_files(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], sys.argv[5]) 
