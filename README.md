@@ -20,6 +20,10 @@ camera azimuth, and GNSS elevation.  You can then select to view the full sized 
 
 The CSV file can be imported into a GIS using WGS84 with elevation is height above the WGS84 elipsoid (if your images also include elevation in the EXIF).
 
+**Installation**
+Download the project and run at a bash or cmd in the same directory as setup.py
+$python setup.py install
+
 **How to Execute:**
 
 GUI:
@@ -30,7 +34,7 @@ $python geotag_gui.py
 
 Command Line:
 
-Open an new bash or cmd in 
+Open a new bash or cmd in 
 */Geotagged_Image_Tools/geotagged_image_tools and run
 $python Create_KML_CSV_From_Geotagged_Images2020.py '*/your_folder_of_images' 'yourfilename' 'ff000000' True True
 
