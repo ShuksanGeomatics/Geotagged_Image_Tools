@@ -1,57 +1,46 @@
 Create KML file (and/or CSV file)for all geo-tagged images (jpg or tif) in a directory.
-
 Author:  Gerry Gabrisch GISP (gerry@shuksangeomatics.com)
+Python v3.6
+Tested and working on Ubuntu 18.04 
 
  
 This tool will take a directory of geo-tagged images (including images in any subdirectories) and 
-it will create  a KML file or a CSV file in that directory. 
-
-Created with Python 3.6
-Tested and working on Ubuntu 18.04 
-
-This tool requires the following third-party libraries available from PyPi.
-Pillow (Python 3 fork of the Python Image Library (PIL)
-simplekml
-
+it will create  a KML file and/or a CSV file in that directory. 
 
 The output KML file can be opened in Google Earth and each image will 
 be referenced by a Google Earth icon (a black and white target).  Each 
 icon is labeled with the image name.
 
 Clicking on an icon in Google Earth will open a balloon box displaying 
-the image, the image path relative to the kml, the image capture date, 
+the image.  The balloon box will also include metadata including the image path relative to the KML, the image capture date, 
 camera azimuth, and GNSS elevation.
 
-The csv file can be imported into QGIS or ArcGIS with coordinates in WGS84 with elevation is height above the WGS84 elipsoid.
+The CSV file can be imported into a GIS using WGS84 with elevation is height above the WGS84 elipsoid (if your images also include elevation in the EXIF).
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
 
 User Inputs
 
 1. A directory of images (string)
 2. A project name (will be used to name the output files). (string)
-3. KML font color (this option is NOT available if you use the code via the GUI only the command line version allows for font color
-in hex). (string)
+3. KML font color (NOT optional if you use the GUI -only the command line version allows for font color in hex). (hexidecimal code as as string)
 4. Make KML (Boolean)
 5. Make CSV (Boolean)
 
 
-The KML will store relative paths to the images so the directory can me moved or shared.
-As of this writing my version of Google Earth Pro does not support relative paths on Ubuntu Linux.
-
-
 Create_KML_CSV_From_Geotagged_Images.py script can be executed at the command line with the example below.
-$python Create_KML_CSV_From_Geotagged_Images2020.py '/home/gerry/PythonScripts/GeoEXIF/testimage' 'yourfilename' 'ff000000' True True
+$python Create_KML_CSV_From_Geotagged_Images2020.py '/home/mycomputer/PythonScripts/GeoEXIF/testimage' 'yourfilename' 'ff000000' True True
 
-A graphical user interface to Create_KML_CSV_From_Geotagged_Images2020.py is available by executing 
+A graphical user interface to Create_KML_CSV_From_Geotagged_Images2020.py is available. Open an new bash or cmd in ./geotagged_image_tools and run
 $python geotag_gui.py
-or running geotag_gui.py in a Python IDE will open the GUI.
+alternatevely you can also run geotag_gui.py in a Python IDE.
 
 
-Position accuracy is affected by weather, terrain, atmosphere, satellite availability
-and electronics.  The positions recorded by this tool are extracted from the positions
-recorded by your device.  Positional accuracy is not guaranteed.  You can improve your
-location accuracy by letting your GNSS run prior to capturing images.  Check your location
-in a mapping app like Google Maps to ensure your GNSS is recording your correct location
-before capturing imagery with your device.
+Image location accuracy is affected by terrain, atmosphere, satellite availability
+and electronics quality.  The positions displayed by this tool are extracted from the positions
+recorded by your GPS enabled camera. You can improve your location accuracy by letting your GNSS 
+run prior to capturing images.  Check your location in a mapping app like Google Maps to ensure 
+your GNSS is recording your correct location before capturing imagery with your device.
 
 
 This software is provided AS-IS, without warranty of any kind, expressed or implied, including
