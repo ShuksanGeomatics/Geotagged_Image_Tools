@@ -1,7 +1,10 @@
-Create KML file (and/or CSV file)for all geo-tagged images (jpg or tif) in a directory.
+**Create KML file (and/or CSV file)for all geo-tagged images (jpg or tif) in a directory.**
 Author:  Gerry Gabrisch GISP (gerry@shuksangeomatics.com)
 Python v3.6
-Tested and working on Ubuntu 18.04 
+Tested and working on: 
+Ubuntu 18.04 
+Windows 10
+
 
  
 This tool will take a directory of geo-tagged images (including images in any subdirectories) and 
@@ -13,9 +16,29 @@ icon is labeled with the image name.
 
 Clicking on an icon in Google Earth will open a balloon box displaying 
 the image.  The balloon box will also include metadata including the image path relative to the KML, the image capture date, 
-camera azimuth, and GNSS elevation.
+camera azimuth, and GNSS elevation.  You can then select to view the full sized image in Google Earth
 
 The CSV file can be imported into a GIS using WGS84 with elevation is height above the WGS84 elipsoid (if your images also include elevation in the EXIF).
+
+**How to Execute:**
+
+GUI:
+
+A graphical user interface to Create_KML_CSV_From_Geotagged_Images2020.py is available. Open an new bash or cmd in 
+*/Geotagged_Image_Tools/geotagged_image_tools and run
+$python geotag_gui.py
+
+Command Line:
+
+Open an new bash or cmd in 
+*/Geotagged_Image_Tools/geotagged_image_tools and run
+$python Create_KML_CSV_From_Geotagged_Images2020.py '*/your_folder_of_images' 'yourfilename' 'ff000000' True True
+
+From another script:
+
+import Create_KML_CSV_From_Geotagged_Images
+Create_KML_CSV_From_Geotagged_Images.make_files('/home/gerry/PythonScripts/Geotagged_Image_Tools/tests/test_images/','ranasimported','ff000000',True,True)
+
 
 ################
 
@@ -28,12 +51,8 @@ User Inputs
 5. Make CSV (Boolean)
 
 ##############
-Create_KML_CSV_From_Geotagged_Images.py script can be executed at the command line with the example below.
-$python Create_KML_CSV_From_Geotagged_Images2020.py '/home/mycomputer/PythonScripts/GeoEXIF/testimage' 'yourfilename' 'ff000000' True True
 
-A graphical user interface to Create_KML_CSV_From_Geotagged_Images2020.py is available. Open an new bash or cmd in ./geotagged_image_tools and run
-$python geotag_gui.py
-alternatevely you can also run geotag_gui.py in a Python IDE.
+
 
 
 Image location accuracy is affected by terrain, atmosphere, satellite availability
