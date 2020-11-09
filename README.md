@@ -17,7 +17,7 @@ camera azimuth, and GNSS elevation.
 
 The CSV file can be imported into a GIS using WGS84 with elevation is height above the WGS84 elipsoid (if your images also include elevation in the EXIF).
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
+################
 
 User Inputs
 
@@ -27,7 +27,7 @@ User Inputs
 4. Make KML (Boolean)
 5. Make CSV (Boolean)
 
-
+##############
 Create_KML_CSV_From_Geotagged_Images.py script can be executed at the command line with the example below.
 $python Create_KML_CSV_From_Geotagged_Images2020.py '/home/mycomputer/PythonScripts/GeoEXIF/testimage' 'yourfilename' 'ff000000' True True
 
